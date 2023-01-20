@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flex layout</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .container div {
+        flex-grow: 1;
+      }
+      @media screen and (min-width: 522px) and (max-width: 768px) {
+        .container {
+          flex-direction: row;
+        }
+        .one {
+          flex-basis: 100%;
+        }
+        .two,
+        .three,
+        .four,
+        .five,
+        .six,
+        .seven,
+        .eight,
+        .nine {
+          flex-basis: 50%;
+        }
+      }
+      @media screen and (min-width: 769px) {
+        .container {
+          flex-direction: row;
+        }
+        .one {
+          flex-basis: 100%;
+        }
+        .two,
+        .three,
+        .four,
+        .five,
+        .nine {
+          flex-basis: 25%;
+        }
+        .six,
+        .seven {
+          flex-basis: 50%;
+        }
+        .eight {
+          flex-basis: 75%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">ONE</div>
+      <div class="two">TWO</div>
+      <div class="three">THREE</div>
+      <div class="four">FOUR</div>
+      <div class="five">FIVE</div>
+      <div class="six">SIX</div>
+      <div class="seven">SEVEN</div>
+      <div class="eight">EIGHT</div>
+      <div class="nine">NINE</div>
+    </div>
+  </body>
+</html>
